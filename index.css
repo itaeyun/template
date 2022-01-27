@@ -35,10 +35,9 @@
     --line-height-small: 1.2;
 
     --black: #000;
-    --pink: #ff3258;
+    --pink: #bdb1a8;
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
-
 
     --container-max-width: 1180px;
     --container-normal-width: 800px;
@@ -51,7 +50,7 @@
     --gutter-small-1: 2.5rem;
     --gutter-small: 2rem;
 
-    --border-light: 1px solid rgb(36, 35, 35);
+    --border-light: px solid rgb(36, 35, 35);
 }
 
 html {
@@ -339,6 +338,8 @@ body:not(.user-is-tabbing) a:focus {
     display: flex;
     justify-content: flex-end;
     padding: var(--gutter-normal) 0;
+    position: fixed;
+    right: 3rem;
 }
 
 .nav__items {
@@ -448,17 +449,17 @@ body:not(.user-is-tabbing) a:focus {
 @media(max-width: 900px) {
     .work__box {
         align-items: initial;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 }
 
 .work__box:not(:last-child) {
-    margin-bottom: 25rem;
+    margin-bottom: 20rem;
 }
 
 @media(max-width: 500px) {
     .work__box:not(:last-child) {
-        margin-bottom: 20rem;
+        margin-bottom: 15rem;
     }
 }
 
@@ -468,7 +469,8 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__text {
-    flex: 0 0 30%;
+    flex: 0 0 45%;
+    margin: 0 0 3rem 2rem;
 }
 
 .work__list {
@@ -490,12 +492,13 @@ body:not(.user-is-tabbing) a:focus {
 
 .work__image-box {
     margin-bottom: var(--gutter-normal);
+    right: 0rem;
 }
 
 @media(min-width: 901px) {
     .work__image-box {
         flex: 1;
-        margin: 0 0 0 10rem;
+        margin: 0 0 0 0rem;
     }
 }
 
@@ -511,18 +514,21 @@ body:not(.user-is-tabbing) a:focus {
 
 .client__logos {
     display: flex;
-    justify-content: space-between;
-    filter: invert(100%) grayscale(100%) opacity(.8);
+    justify-content: space-around;
+    /* justify-content: space-between; */
+    /* filter: invert(100%) grayscale(100%) opacity(.8); */
 }
 
 .client__logo {
-    height: 6.5rem;
-    max-width: 18rem;
+    /* height: 6.5rem;
+    max-width: 18rem; */
+    height: auto;
+    max-width: 12rem;
 }
 
 @media(max-width: 1240px) {
     .client__logos {
-        overflow-x: scroll;
+        /* overflow-x: scroll; */
         padding: var(--gutter-normal);
     }
 
@@ -554,7 +560,7 @@ body:not(.user-is-tabbing) a:focus {
 
 @media(min-width: 901px) {
     .about__text {
-        flex: 0 0 35%;
+        flex: 0 0 60%;
     }
     
     .about__photo-container {
